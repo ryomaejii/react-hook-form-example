@@ -2,8 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-// 性別を表す型
-type Gender = "male" | "female" | "other" | "";
+type Gender = "male" | "female" | "other";
 
 export type SampleFormInput = {
   name: string;
@@ -18,7 +17,6 @@ const sampleFormSchema = z
     email: z.string().email(),
     password: z.string().min(8).max(20),
     gender: z.union([
-      z.literal(""),
       z.literal("male"),
       z.literal("female"),
       z.literal("other"),
@@ -32,7 +30,7 @@ export const useSampleForm = () => {
       name: "",
       email: "",
       password: "",
-      gender: "",
+      gender: undefined,
     },
     resolver: zodResolver(sampleFormSchema),
     mode: "onChange",
