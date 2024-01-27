@@ -1,4 +1,4 @@
-import { SampleForm } from "../components/SampleForm";
+import { SampleForm } from "components/SampleForm";
 
 export const TopPage = () => {
   return (

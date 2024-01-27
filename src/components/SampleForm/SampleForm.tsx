@@ -1,6 +1,6 @@
+import { RhfInput } from "components/Input";
+import { RhfSelect } from "components/Select";
 import { useState } from "react";
-import { RhfInput } from "../Input";
-import { RhfSelect } from "../Select";
 import { useSampleForm } from "./useSampleForm";
 
 export const SampleForm = () => {
